@@ -1,21 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { useState } from 'react';
+import styled from 'styled-components/native';
+import After from './After/After';
+import Before from './Before/Before';
+
+
+const Conatiner = styled.View`
+`;
+
 
 export default function App() {
+  const [loading, setLoading] = useState(false);
+  setTimeout(() => {
+    setLoading(true);
+  }, 3500);
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Conatiner>
+      {loading ? <StatusBar style="dark"/> : null}
+      {loading ? <After/> : <Before/>}
+    </Conatiner>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
