@@ -10,3 +10,5 @@
 - 수익률 계산 두가지 방법으로 하기
 
 ##### 사용된 기술 : react-native, styled-components, expo
+
+https://user-images.githubusercontent.com/74255306/121383979-d5831080-c982-11eb-852c-43a507a612b8.mov
